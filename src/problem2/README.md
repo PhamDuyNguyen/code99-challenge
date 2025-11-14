@@ -17,7 +17,7 @@ A modern, beautiful currency swap application built with **Vite**, **React**, an
 ## 🚀 Getting Started
 
 ### Application
-- Running on: `code99-challenge.vercel.app`
+- Running on: [https://code99-challenge.vercel.app/](https://code99-challenge.vercel.app/)
 
 ### Prerequisites
 
