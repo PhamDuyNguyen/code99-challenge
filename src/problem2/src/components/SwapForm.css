@@ -1,0 +1,284 @@
+.swap-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.swap-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swap-header {
+  margin-bottom: 32px;
+}
+
+.swap-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.swap-section {
+  margin-bottom: 12px;
+}
+
+.section-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.input-group:focus-within {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.amount-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  outline: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.amount-input::placeholder {
+  color: #d1d5db;
+}
+
+.amount-input:read-only {
+  cursor: default;
+}
+
+.usd-value {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+  padding-left: 4px;
+}
+
+.swap-arrow-container {
+  display: flex;
+  justify-content: center;
+  margin: -6px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.swap-arrow-button {
+  background: white;
+  border: 2px solid #e5e7eb;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #6b7280;
+}
+
+.swap-arrow-button:hover {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+  transform: rotate(180deg);
+}
+
+.exchange-rate {
+  background: #f3f4f6;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.rate-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.rate-value {
+  color: #111827;
+  font-weight: 600;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #ef4444;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #fecaca;
+}
+
+.success-message {
+  background: #f0fdf4;
+  color: #22c55e;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #bbf7d0;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swap-button {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+}
+
+.swap-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.swap-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.swap-button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .swap-card {
+    padding: 24px;
+  }
+
+  .swap-header h1 {
+    font-size: 28px;
+  }
+
+  .amount-input {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .swap-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .swap-header {
+    margin-bottom: 24px;
+  }
+
+  .swap-header h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .amount-input {
+    font-size: 18px;
+  }
+
+  .input-group {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .exchange-rate {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    font-size: 13px;
+  }
+
+  .rate-value {
+    word-break: break-all;
+  }
+
+  .swap-button {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .usd-value {
+    font-size: 13px;
+  }
+
+  .section-label {
+    font-size: 13px;
+  }
+}
+
